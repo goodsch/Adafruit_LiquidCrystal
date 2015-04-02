@@ -1,3 +1,8 @@
+/***************************************************
+  A fork of Adafruit LiquidCrystal library that support 
+  i2c / SPI character LCD backpack.
+ ****************************************************/
+
 #include "Adafruit_LiquidCrystal/Adafruit_LiquidCrystal.h"
 
 // TO connect via SPI. Data pin is A5, Clock is A3 and Latch is A2
