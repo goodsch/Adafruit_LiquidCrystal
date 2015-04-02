@@ -13,6 +13,8 @@
 
 #ifndef _ADAFRUIT_MCP23008_H
 #define _ADAFRUIT_MCP23008_H
+
+#include "application.h"
 // Don't forget the Wire library
 class Adafruit_MCP23008 {
 public:

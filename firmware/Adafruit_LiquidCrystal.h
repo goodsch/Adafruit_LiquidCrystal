@@ -1,8 +1,7 @@
 #ifndef LiquidCrystal_h
 #define LiquidCrystal_h
 
-#include <inttypes.h>
-#include "Print.h"
+#include "application.h"
 #include "Adafruit_MCP23008.h"
 
 // commands
@@ -86,11 +85,7 @@ public:
 
   void createChar(uint8_t, uint8_t[]);
   void setCursor(uint8_t, uint8_t); 
-#if ARDUINO >= 100
   virtual size_t write(uint8_t);
-#else
-  virtual void write(uint8_t);
-#endif
   void command(uint8_t);
 private:
   void send(uint8_t, uint8_t);

@@ -1,19 +1,8 @@
-#include "LiquidCrystal.h"
+#include "Adafruit_LiquidCrystal.h"
 
-#include <stdio.h>
-#include <string.h>
-#include <inttypes.h>
-#if ARDUINO >= 100
- #include "Arduino.h"
-#else
- #include "WProgram.h"
-#endif
-
-// FOR Arduino Due
 #if !defined(_BV)
 #	define _BV(bit) (1 << (bit))
-#endif 
-
+#endif
 
 // When the display powers up, it is configured as follows:
 //
@@ -335,16 +324,10 @@ inline void LiquidCrystal::command(uint8_t value) {
   send(value, LOW);
 }
 
-#if ARDUINO >= 100
 inline size_t LiquidCrystal::write(uint8_t value) {
   send(value, HIGH);
   return 1;
 }
-#else
-inline void LiquidCrystal::write(uint8_t value) {
-  send(value, HIGH);
-}
-#endif
 
 /************ low level data pushing commands **********/
 
@@ -385,7 +368,7 @@ void  LiquidCrystal::_pinMode(uint8_t p, uint8_t d) {
     // nothing!
   } else {
     // straightup IO
-    pinMode(p, d);
+    pinMode(p, (PinMode)d);
   }
 }
 
