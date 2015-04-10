@@ -2,7 +2,7 @@
 #define LiquidCrystal_h
 
 #include "application.h"
-#include "adafruit_MCP23017.h"
+#include "Adafruit_MCP23017.h"
 
 // commands
 #define LCD_CLEARDISPLAY 0x01
