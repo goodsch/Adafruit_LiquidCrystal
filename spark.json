@@ -1,6 +1,6 @@
 {
-  "name": "Adafruit_LiquidCrystal",
-  "author": "Christian Vallières",
+  "name": "Adafruit_LiquidCrystal2",
+  "author": "Chris",
   "license": "BSD",
   "version": "1.0.0",
   "description": "A fork of Adafruit LiquidCrystal library that support i2c / SPI character LCD backpack."
